@@ -1,0 +1,42 @@
+
+#section_1 {
+    background-color: #fff;
+}
+#section_1 .about {
+    margin-left: 40%;
+}
+.danger {
+    color: rgb(57, 108, 176) !important;
+}
+#section_2 {
+    background-color: rgb(142, 202, 230);
+
+}
+#section_2 p {
+    color: black;
+}
+
+.prevent_item_container {
+    background-color: rgb(243, 237, 237);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+    border-radius: 60px 0 0 60px;
+    padding: 15px 10px;
+    max-width: 75%;
+    margin-bottom: 20px;
+    color: black;
+    margin-left: 23px !important;
+}
+.prevention_img_bg {
+    background-color: rgb(142, 202, 230);
+    padding: 0.2rem;
+}
+.prevent_img {
+    display:block;
+    width: 50px;
+}
+
+.prevent_item_container:hover {
+    background-color: rgb(0, 171, 233);
+    color: #fff;
+
+}
