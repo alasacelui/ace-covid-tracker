@@ -1,11 +1,11 @@
 <template>
   <div class="container py-5">
-      <h2 class="text-center text-muted">Track Covid-19 <i class="fas fa-globe-asia"></i> </h2>
+      <h2 class="text-center text-info">Track Covid-19 <i class="fas fa-globe-asia"></i> </h2>
       <div class="row justify-content-center mt-4">
           <div class="col-12">
               <br>
               <div class="form-group">
-                <label>Select Country</label>
+                <label>Select Country *</label>
                 <select class="form-control" ref="country" v-if="countries.length" @change="getCountryCases" v-model="selected">
                     <option :value="country" v-for="(country, index) in countries" :key="index">{{ country }}</option>
                 </select>
@@ -67,20 +67,26 @@
            </div>
        </div>
 
+       <Chart :top_ten_countries="top_ten_countries" v-if="top_ten_countries.length"> </Chart>
+
+      
   </div>
 </template>
 
 <script>
 import Load from '../assets/functions'
+import Chart from '../components/Chart.vue'
 
 export default {
+    components: {Chart},
     data() {
         return {
             countries: [],
             countries_w_data: [],
             selected: null,
             country_data: [],
-            country_code: null
+            country_code: null,
+            top_ten_countries: []
         }
     },
     methods: {
@@ -89,6 +95,8 @@ export default {
             const data = await res.json()
             this.countries_w_data = data;
             this.countries = Object.keys(data);
+
+            this.getTopTenCountries()
             
         },
          getCountryCases() {
@@ -107,7 +115,35 @@ export default {
            
             const my_country_code = Object.keys(data).find(key => data[key] === country)
             this.country_code = `https://www.countryflags.io/${my_country_code}/flat/64.png`;
-        }
+        },
+        getTopTenCountries() {
+
+            const topten =JSON.parse(JSON.stringify(this.countries_w_data)) // get all the countries with data
+
+            const a = Object.entries(topten) // convert the object into array and loop through
+            
+            let c_w_key_val = []; // country with key val container
+            
+            const b = a.forEach(data => { // loop country (Array)
+                c_w_key_val.push({
+                    country: {
+                        name: data[0],
+                        cases : data[1].pop().confirmed
+                    }
+                }) // push each value to the country container []
+            })
+
+            const highest_to_lowest = c_w_key_val.sort((a,b) => { // sort from highest to lowest
+                return b.country.cases - a.country.cases
+            })
+
+            const get_to_ten_highest_cases = highest_to_lowest.slice(0,10) // get the top 10
+
+            this.top_ten_countries = get_to_ten_highest_cases
+           
+           
+           
+       }
     },
     mounted() {
         this.getReports()

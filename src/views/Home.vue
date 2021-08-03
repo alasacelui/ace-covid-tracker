@@ -29,7 +29,8 @@
                 <div class="card-body">
                   <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h1 class="danger text-dark"  ref="confirmed">{{data.confirmed }}</h1>
+                        <h1 v-if="data.confirmed" class="danger text-dark"  ref="confirmed">{{data.confirmed }}</h1>
+                        <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
                         <span class="text-dark">Total Confirmed Cases <img src="../../public/philippines.png" alt="ph" width="20"></span>
                       </div>
                   <div class="align-self-center">
@@ -46,7 +47,9 @@
                   <div class="card-body">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                          <h1 class="danger text-dark"  ref="recovered">{{data.recovered }}</h1>
+                          <h1 v-if="data.recovered" class="danger text-dark"  ref="recovered">{{data.recovered }}</h1>
+                          <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
+
                           <span class="text-dark">Total Recovered <img src="../../public/philippines.png" alt="ph" width="20"> </span>
                         </div>
                     <div class="align-self-center">
@@ -63,7 +66,8 @@
                     <div class="card-body">
                       <div class="media d-flex">
                           <div class="media-body text-left">
-                            <h1 class="danger text-dark"  ref="deaths">{{data.deaths }}</h1>
+                            <h1 v-if="data.deaths" class="danger text-dark"  ref="deaths">{{data.deaths }}</h1>
+                            <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
                             <span class="text-dark">Total Death <img src="../../public/philippines.png" alt="ph" width="20"></span>
                           </div>
                       <div class="align-self-center">
@@ -85,12 +89,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <!--First Item-->
-                          <div class="carousel-item " data-interval="3500">
+                          <div class="carousel-item active " data-interval="5000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">What is Corona Virus ?</h1>
                                     <br>
-                                   <img class="img-fluid d-none d-md-block" src="../../public/virus6.png" alt="ncov" width="300">
+                                    <br>
+                                   <img class="img-fluid d-none d-md-block ml-3" src="../../public/virus6.png" alt="ncov" width="350">
                               </div>
 
                               <div class="col-md-6 mb-3">
@@ -112,7 +117,7 @@
                           </div>
 
                           <!--Second Item-->
-                          <div class="carousel-item  " data-interval="3000">
+                          <div class="carousel-item  " data-interval="5000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Symptoms</h1>
@@ -175,7 +180,7 @@
                           </div>
 
                            <!--Third Item-->
-                          <div class="carousel-item active " data-interval="15000">
+                          <div class="carousel-item " data-interval="5000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Prevention</h1>
@@ -277,12 +282,13 @@ export default {
           const {Philippines} = await res.json()
            
         this.data = Philippines.pop()
-        Load(this.data, this.$refs.confirmed, this.$refs.recovered, this.$refs.deaths)
     },
         
   },
-  mounted() {
-    this.getCovidSummary();
+  async mounted() {
+    await this.getCovidSummary();
+    Load(this.data, this.$refs.confirmed, this.$refs.recovered, this.$refs.deaths)
+
   },
 }
 </script>
