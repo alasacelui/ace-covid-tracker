@@ -20,7 +20,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">News</a>
+                            <router-link class="nav-link" :to="{name:'News'}">News</router-link>
                         </li>
                       
                         <li class="nav-item">

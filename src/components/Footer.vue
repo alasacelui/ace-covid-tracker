@@ -1,30 +1,20 @@
 <template>
-    <footer class="py-5 bg-info text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <form >
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Enter your email address" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-dark">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-md-2"></div>
-
-            <div class="col-md-6">
-                <ul class="services d-flex justify-content-between">
-                    <li class="">Home</li>
-                    <li class="">Tracker</li>
-                    <li class="">Contact</li>
-                    <li class="">News</li>
-                    <li class="">FAQ</li>
-                </ul>
-            </div>
-        </div>
+    <footer class="py-5 text-white" id="footer">
+        <div class="container">
+      <h3>Covid <span class="text-info">Tracker</span> </h3><br>
+      <div class="social-links mb-2">
+        <a href="#" class="twitter"><i class="fab fa-twitter fa-lg mr-2"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-facebook fa-lg mr-2"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-github fa-lg mr-2"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-youtube fa-lg mr-2"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-viber fa-lg mr-2"></i></a>
+        
+      </div>
+      <div class="copyright">
+        © <strong><span>Covid Tracker</span></strong> . All Rights Reserved
+      </div>
+      <div class="credits">
+      </div>
     </div>
 
   </footer>
@@ -36,6 +26,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+#footer {
+    background: #14151c;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+}
 
 </style>

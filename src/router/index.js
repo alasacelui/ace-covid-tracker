@@ -16,6 +16,11 @@ const routes = [
     path: '/tracker',
     name: 'Tracker',
     component: () => import( '../views/Tracker.vue')
+  },
+  {
+    path: '/news',
+    name: 'News',
+    component: () => import( '../views/News.vue')
   }
 ]
 

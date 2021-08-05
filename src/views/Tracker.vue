@@ -5,8 +5,9 @@
           <div class="col-12">
               <br>
               <div class="form-group">
-                <label>Select Country *</label>
+                <label>Select Country </label>
                 <select class="form-control" ref="country" v-if="countries.length" @change="getCountryCases" v-model="selected">
+                    <option>-- Select Country --</option>
                     <option :value="country" v-for="(country, index) in countries" :key="index">{{ country }}</option>
                 </select>
               </div>
@@ -15,16 +16,16 @@
 
        <div class="row justify-content-center mt-4">
            <div class="col-md-4">
-                <div class="card p-3">
+                <div class="card p-3 shadow p-3 mb-5 bg-white rounded rounded">
                     <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-left">
-                            <h1 class="danger text-dark"  ref="confirmed">{{ country_data.confirmed }}</h1>
+                            <h1 class="danger text-dark font-weight-bold"  ref="confirmed">{{ country_data.confirmed }}</h1>
                             <span class="text-dark">Total Confirmed Cases <img :src="country_code" width="20"></span>
                             </div>
                         <div class="align-self-center">
-                            <img class="float-right danger" src="https://img.icons8.com/color/48/000000/protection-mask.png" width="50"/>
+                            <img class="float-right danger img-fluid" src="../../public/icons/patient.svg" width="50"/>
                         </div>
                         </div>
                     </div>
@@ -32,16 +33,16 @@
                 </div>
            </div>
             <div class="col-md-4">
-                <div class="card p-3">
+                <div class="card p-3 shadow p-3 mb-5 bg-white rounded rounded">
                     <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-left">
-                            <h1 class="danger text-dark"  ref="recovered">{{ country_data.recovered }}</h1>
+                            <h1 class="danger text-dark font-weight-bold"  ref="recovered">{{ country_data.recovered }}</h1>
                             <span class="text-dark">Total Recovered <img :src="country_code" width="20"></span>
                             </div>
                         <div class="align-self-center">
-                            <img class="float-right danger" src="https://img.icons8.com/color/48/000000/organ-transplantation.png" width="50"/>
+                           <img class="float-right danger img-fluid" src="../../public/icons/recovered.svg" width="50"/>
                         </div>
                         </div>
                     </div>
@@ -49,16 +50,16 @@
                 </div>
            </div>
            <div class="col-md-4">
-                <div class="card p-3">
+                <div class="card p-3 shadow p-3 mb-5 bg-white rounded rounded">
                     <div class="card-content">
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-left">
-                            <h1 class="danger text-dark"  ref="deaths">{{ country_data.deaths }}</h1>
+                            <h1 class="danger text-dark font-weight-bold"  ref="deaths">{{ country_data.deaths }}</h1>
                             <span class="text-dark">Total Deaths <img :src="country_code" width="20"></span>
                             </div>
                         <div class="align-self-center">
-                            <img class="float-right danger" src="https://img.icons8.com/fluency/48/000000/obituary.png" width="50"/>
+                             <img class="float-right danger img-fluid" src="../../public/icons/death.svg" width="50"/>
                         </div>
                         </div>
                     </div>
@@ -68,6 +69,7 @@
        </div>
 
        <Chart :top_ten_countries="top_ten_countries" v-if="top_ten_countries.length"> </Chart>
+       <div v-else>Loading ...</div>
 
       
   </div>

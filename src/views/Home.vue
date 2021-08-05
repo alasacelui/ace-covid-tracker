@@ -1,16 +1,16 @@
 <template>
    <section id="main">
             <div class="jumbotron jumbotron-fluid text-white m-0 text-sm-center text-lg-left" id="main">
-              <div class="container ">
+              <div class="container">
                   <div class="row">
                       <div class="d-flex">
                           <div class="section-1-text py-5 p-2">
-                              <h1 class="display-4 text-dark font-weight-bold">Stay <span class="text-info font-weight-bold">Safe <img src="../../public/philippines.png" alt="ph" width="60"> </span> <br>Stay<span class='text-info font-weight-bold'> Home </span></h1>
+                              <h1 class="display-4 text-dark font-weight-bold">Stay <span class="text-info font-weight-bold">Safe <img src="../../public/globe.svg" alt="safe_earth" width="60"> </span> <br>Stay<span class='text-info font-weight-bold'> Home </span></h1>
                               <p class="lead text-dark">The virus that causes COVID-19 can spread from person to person through droplets that are expelled into the air when an infected person coughs or sneezes.</p>
                                   <a class="btn btn-info " href="#">Read More</a>
                           </div>
                         
-                          <img class="img-fluid d-none d-md-block" src="../../public/virus.png" alt="" width="400">
+                          <img class="img-fluid d-none d-md-block" src="../../public/coronavirus.svg" alt="" width="400">
                       </div>
                   </div>
                 </div>
@@ -19,22 +19,22 @@
     
 
   <section id="about_us">
-    <div class="jumbotron jumbotron-fluid text-white" id="section_1">
+    <div class="jumbotron jumbotron-fluid text-white m-0" id="section_1">
         <h1 class="text-center font-weight-bold danger">Latest Update <i class="fas fa-bell"></i></h1>
       <div class="container py-5">
         <div class="row mt-2">
           <div class="col-md-4">
-            <div class="card p-3">
+            <div class="card p-4 shadow p-3 mb-5 bg-white rounded rounded">
               <div class="card-content">
                 <div class="card-body">
                   <div class="media d-flex">
                       <div class="media-body text-left">
-                        <h1 v-if="data.confirmed" class="danger text-dark"  ref="confirmed">{{data.confirmed }}</h1>
+                        <h1 v-if="data.confirmed" class="danger text-dark font-weight-bold"  ref="confirmed">{{data.confirmed }}</h1>
                         <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
                         <span class="text-dark">Total Confirmed Cases <img src="../../public/philippines.png" alt="ph" width="20"></span>
                       </div>
                   <div class="align-self-center">
-                      <img class="float-right danger img-fluid" src="https://img.icons8.com/color/48/000000/protection-mask.png" width="50"/>
+                      <img class="float-right danger img-fluid" src="../../public/icons/patient.svg" width="50"/>
                   </div>
                   </div>
                 </div>
@@ -42,18 +42,18 @@
             </div>
           </div>
           <div class="col-md-4">
-              <div class="card p-3">
+              <div class="card p-4 shadow p-3 mb-5 bg-white rounded rounded">
                 <div class="card-content">
                   <div class="card-body">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                          <h1 v-if="data.recovered" class="danger text-dark"  ref="recovered">{{data.recovered }}</h1>
+                          <h1 v-if="data.recovered" class="danger text-dark font-weight-bold"  ref="recovered">{{data.recovered }}</h1>
                           <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
 
                           <span class="text-dark">Total Recovered <img src="../../public/philippines.png" alt="ph" width="20"> </span>
                         </div>
                     <div class="align-self-center">
-                        <img class="float-right danger img-fluid" src="https://img.icons8.com/color/48/000000/organ-transplantation.png" width="50"/>
+                        <img class="float-right danger img-fluid" src="../../public/icons/recovered.svg" width="50"/>
                     </div>
                     </div>
                   </div>
@@ -61,17 +61,17 @@
               </div>
             </div>
             <div class="col-md-4">
-                <div class="card p-3">
+                <div class="card p-4 shadow p-3 mb-5 bg-white rounded rounded">
                   <div class="card-content">
                     <div class="card-body">
                       <div class="media d-flex">
                           <div class="media-body text-left">
-                            <h1 v-if="data.deaths" class="danger text-dark"  ref="deaths">{{data.deaths }}</h1>
+                            <h1 v-if="data.deaths" class="danger text-dark font-weight-bold"  ref="deaths">{{data.deaths }}</h1>
                             <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
                             <span class="text-dark">Total Death <img src="../../public/philippines.png" alt="ph" width="20"></span>
                           </div>
                       <div class="align-self-center">
-                    <img class="float-right danger img-fluid" src="https://img.icons8.com/fluency/48/000000/obituary.png" width="50"/>
+                        <img class="float-right danger img-fluid" src="../../public/icons/death.svg" width="50"/>
                       </div>
                       </div>
                     </div>
@@ -83,7 +83,7 @@
     </div>
   </section>
   <section>
-     <div class="jumbotron jumbotron-fluid text-white" id="section_2">
+     <div class="jumbotron jumbotron-fluid text-white m-0" id="section_2">
         <div class="container">
             <div class="row justify-content-center">
                     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -98,7 +98,7 @@
                                    <img class="img-fluid d-none d-md-block ml-3" src="../../public/virus6.png" alt="ncov" width="350">
                               </div>
 
-                              <div class="col-md-6 mb-3">
+                              <div class="col-md-6 mb-4">
                                   <p class="lead">
                                   <span class="font-weight-bold danger">COVID-19</span> affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
                                  </p>
@@ -112,6 +112,7 @@
                                   Some children and teens who are in the hospital with COVID-19 have an inflammatory condition that doctors are calling multisystem inflammatory syndrome in children.
                                   </p>
                                   <button class="btn btn-lg btn-info mb-5">Read More</button>
+                                
                               </div>
                             </div>
                           </div>
@@ -122,7 +123,8 @@
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Symptoms</h1>
                                     <br>
-                                   <img class="img-fluid d-none d-md-block" src="../../public/corona-symptoms-img.svg" alt="ncov" width="150">
+                                    <br>
+                                   <img class="img-fluid d-none d-md-block ml-5" src="../../public/corona-symptoms-img.svg" alt="ncov" width="150">
                               </div>
                               
                               <div class="col-md-6">
@@ -185,10 +187,11 @@
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Prevention</h1>
                                     <br>
-                                   <img class="img-fluid d-none d-md-block" src="../../public/shield.svg" alt="ncov" width="300">
+                                    <br>
+                                   <img class="img-fluid d-none d-md-block ml-3" src="../../public/shield.svg" alt="ncov" width="300">
                               </div>
                               
-                              <div class="col-md-6">
+                              <div class="col-md-6 mb-2">
                                   <p class="lead">
                                   <span class="font-weight-bold danger">Protect</span> yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local health authority..
                                  </p>
