@@ -1,7 +1,7 @@
 <template>
     <footer class="py-5 text-white" id="footer">
         <div class="container">
-      <h3>Covid <span class="text-info">Tracker</span> </h3><br>
+      <h3>Covid <span class="text-info">Tracker</span> <i class="fas fa-virus text-danger"></i> </h3><br>
       <div class="social-links mb-2">
         <a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter fa-lg mr-2"></i></a>
         <a href="javascript:void(0)" class="twitter"><i class="fab fa-facebook fa-lg mr-2"></i></a>
@@ -11,7 +11,7 @@
         
       </div>
       <div class="copyright">
-        © <strong><span>Covid Tracker <i class="fas fa-virus"></i></span></strong> . All Rights Reserved
+        © <strong><span>Covid Tracker <i class="fas fa-virus danger"></i> </span></strong> . All Rights Reserved
       </div>
       <div class="credits">
       </div>
