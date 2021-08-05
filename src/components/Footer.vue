@@ -11,7 +11,7 @@
         
       </div>
       <div class="copyright">
-        © <strong><span>Covid Tracker</span></strong> . All Rights Reserved
+        © <strong><span>Covid Tracker <i class="fas fa-virus"></i></span></strong> . All Rights Reserved
       </div>
       <div class="credits">
       </div>
