@@ -3,11 +3,11 @@
         <div class="container">
       <h3>Covid <span class="text-info">Tracker</span> </h3><br>
       <div class="social-links mb-2">
-        <a href="#" class="twitter"><i class="fab fa-twitter fa-lg mr-2"></i></a>
-        <a href="#" class="twitter"><i class="fab fa-facebook fa-lg mr-2"></i></a>
-        <a href="#" class="twitter"><i class="fab fa-github fa-lg mr-2"></i></a>
-        <a href="#" class="twitter"><i class="fab fa-youtube fa-lg mr-2"></i></a>
-        <a href="#" class="twitter"><i class="fab fa-viber fa-lg mr-2"></i></a>
+        <a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter fa-lg mr-2"></i></a>
+        <a href="javascript:void(0)" class="twitter"><i class="fab fa-facebook fa-lg mr-2"></i></a>
+        <a href="https://github.com/alasacelui" class="twitter"><i class="fab fa-github fa-lg mr-2"></i></a>
+        <a href="javascript:void(0)" class="twitter"><i class="fab fa-youtube fa-lg mr-2"></i></a>
+        <a href="javascript:void(0)" class="twitter"><i class="fab fa-viber fa-lg mr-2"></i></a>
         
       </div>
       <div class="copyright">
