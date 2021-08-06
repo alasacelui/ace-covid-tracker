@@ -1,4 +1,9 @@
-# ace-covid-tracker
+# ace-covid-tracker 📍
+
+**Version 1.0.0**
+---
+About
+A Web Application that can track a Covid-19 Cases by country . With a bonus feature of getting top 25 trending news around the globe .
 
 ## Project setup
 ```
@@ -15,5 +20,6 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## License & Copyright 
+© Ace Manalo , Web Developer
