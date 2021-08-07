@@ -30,7 +30,7 @@
                   <div class="media d-flex">
                       <div class="media-body text-left">
                         <h1 v-if="data.confirmed" class="danger text-dark font-weight-bold"  ref="confirmed">{{data.confirmed }}</h1>
-                        <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
+                        <h1 v-else class="danger">Loading ...</h1>
                         <span class="text-dark">Total Confirmed Cases <img src="../../public/philippines.png" alt="ph" width="20"></span>
                       </div>
                   <div class="align-self-center">
@@ -47,8 +47,8 @@
                   <div class="card-body">
                     <div class="media d-flex">
                         <div class="media-body text-left">
-                          <h1 v-if="data.recovered" class="danger text-dark font-weight-bold"  ref="recovered">{{data.recovered }}</h1>
-                          <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
+                          <h1 v-if="data.recovered || data.recovered == 0" class="danger text-dark font-weight-bold"  ref="recovered">{{data.recovered }}</h1>
+                          <h1 v-else class="danger">Loading ...</h1>
 
                           <span class="text-dark">Total Recovered <img src="../../public/philippines.png" alt="ph" width="20"> </span>
                         </div>
@@ -67,7 +67,7 @@
                       <div class="media d-flex">
                           <div class="media-body text-left">
                             <h1 v-if="data.deaths" class="danger text-dark font-weight-bold"  ref="deaths">{{data.deaths }}</h1>
-                            <h1 v-else class="danger text-dark"  ref="confirmed">Loading ...</h1>
+                            <h1 v-else class="danger">Loading ...</h1>
                             <span class="text-dark">Total Death <img src="../../public/philippines.png" alt="ph" width="20"></span>
                           </div>
                       <div class="align-self-center">
@@ -283,8 +283,11 @@ export default {
    async getCovidSummary() {
           const res = await fetch('https://pomber.github.io/covid19/timeseries.json')
           const {Philippines} = await res.json()
+
+          console.table(Philippines)
            
         this.data = Philippines.pop()
+
     },
         
   },
