@@ -41,7 +41,7 @@ export default {
             const {articles} = await response.json()
            
             this.articles = articles;
-            console.log(articles);
+            
         },
 
     },
