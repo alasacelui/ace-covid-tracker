@@ -10,7 +10,7 @@
                     
                     <br>
                  </div>
-                    <img :src="article.urlToImage" class="card-img-bottom" :title="article.title"> <br>
+                    <img :src="article.urlToImage" v-if="article.urlToImage" ref="article_img" class="card-img-bottom loading" :title="article.title"> <br>
                     <p class="card-text lead text-center">{{ article.description }}</p>
                      <div class="card-footer text-muted text-center">
                        <span>Published at : {{ $moment(article.publishedAt).format("llll") }} </span>  <br><br>
@@ -70,7 +70,8 @@ export default {
         prevPage() {
             this.page--;
             window.scrollTo({top: 0, behavior: 'smooth'})
-        }
+        },
+   
     },
     computed: {
         showArticle () {
@@ -90,6 +91,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.loading {
+  background: transparent url('https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif') center no-repeat;
+}
 
 </style>

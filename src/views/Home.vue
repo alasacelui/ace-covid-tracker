@@ -281,13 +281,14 @@ export default {
   },
   methods: {
    async getCovidSummary() {
-          const res = await fetch('https://pomber.github.io/covid19/timeseries.json')
-          const {Philippines} = await res.json()
 
-          console.table(Philippines)
-           
+        const res = await fetch('https://pomber.github.io/covid19/timeseries.json')
+        const {Philippines} = await res.json()
+
+          
         this.data = Philippines.pop()
 
+  
     },
         
   },
