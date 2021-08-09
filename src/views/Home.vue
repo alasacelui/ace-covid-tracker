@@ -86,10 +86,10 @@
      <div class="jumbotron jumbotron-fluid text-white m-0" id="section_2">
         <div class="container">
             <div class="row justify-content-center">
-                    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="padding: 15px">
                         <div class="carousel-inner">
                           <!--First Item-->
-                          <div class="carousel-item active " data-interval="5000">
+                          <div class="carousel-item active " data-interval="10000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">What is Corona Virus ?</h1>
@@ -118,7 +118,7 @@
                           </div>
 
                           <!--Second Item-->
-                          <div class="carousel-item  " data-interval="5000">
+                          <div class="carousel-item  " data-interval="10000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Symptoms</h1>
@@ -182,7 +182,7 @@
                           </div>
 
                            <!--Third Item-->
-                          <div class="carousel-item " data-interval="5000">
+                          <div class="carousel-item " data-interval="10000">
                             <div class="row">
                               <div class="col-md-6">
                                     <h1 class="danger font-weight-bold">Covid-19 Prevention</h1>
