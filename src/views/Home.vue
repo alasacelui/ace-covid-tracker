@@ -264,6 +264,24 @@
         </div>
       </div>
   </section>
+
+    <section id="at_risk">
+    <div class="jumbotron jumbotron-fluid  m-0" id="section_1">
+      <div class="container py-5">
+        <div class="row mt-2">
+            <div class="col-md-6">
+              <img src="/family.png" class="d-none d-md-block img-fluid " alt="" width="480">
+            </div>
+            <div class="col-md-6">
+              <br>
+              <br>
+                <h2>Who is At Risk ?</h2>
+                <p>People of all ages can be infected by the new coronavirus (2019-nCoV). Older people, and people with pre-existing medical conditions (such as asthma, diabetes, heart disease) appear to be more vulnerable to becoming severely ill with the virus.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
   <Footer/>
 </template>
 

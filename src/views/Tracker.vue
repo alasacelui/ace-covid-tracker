@@ -1,4 +1,5 @@
 <template>
+
   <div class="container py-5">
       <h2 class="text-center text-info">Track Covid-19 <i class="fas fa-globe-asia"></i> </h2>
       <div class="row justify-content-center mt-4">
@@ -71,16 +72,17 @@
        <Chart :top_ten_countries="top_ten_countries" v-if="top_ten_countries.length"> </Chart>
        <div v-else>Loading ...</div>
 
-      
   </div>
+   <Footer/>
 </template>
 
 <script>
 import Load from '../assets/functions'
 import Chart from '../components/Chart.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
-    components: {Chart},
+    components: {Chart,Footer},
     data() {
         return {
             countries: [],
